@@ -29,7 +29,7 @@ public class ScarceMemoryDetector extends ResourceAvailabilityDetector {
   public ScarceMemoryDetector(PolicyConfig policyConfig) {
     super(policyConfig, CONFIG_KEY_PREFIX, SymptomName.SCARCE_MEMORY.text());
     thresholdRatio = (double) policyConfig.getConfig(CONFIG_KEY_PREFIX + THRESHOLD_RATIO_CONFIG_KEY, 1.5);
-    LOG.info("Detector created: " + this.toString());
+    LOG.info("Detector created: " + this);
   }
 
   @Override
