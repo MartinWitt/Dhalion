@@ -80,7 +80,7 @@ public abstract class ResourceAvailabilityDetector extends Detector {
 
     Symptom symptom = new Symptom(symptomType, now, assignments);
     if (LOG.isLoggable(Level.FINE)) {
-      LOG.fine(String.format("Symptom (%s) created for %s", symptom, toString()));
+      LOG.fine(String.format("Symptom (%s) created for %s", symptom, ));
     }
     return Collections.singletonList(symptom);
   }

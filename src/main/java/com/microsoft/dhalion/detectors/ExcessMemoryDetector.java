@@ -30,7 +30,7 @@ public class ExcessMemoryDetector extends ResourceAvailabilityDetector {
   public ExcessMemoryDetector(PolicyConfig policyConfig) {
     super(policyConfig, CONFIG_KEY_PREFIX, SymptomName.EXCESS_MEMORY.text());
     thresholdRatio = (double) policyConfig.getConfig(CONFIG_KEY_PREFIX + THRESHOLD_RATIO_CONFIG_KEY, 2.0);
-    LOG.info("Detector created: " + this.toString());
+    LOG.info("Detector created: " + this);
   }
 
   @Override

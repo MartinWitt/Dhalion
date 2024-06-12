@@ -29,7 +29,7 @@ public class ExcessCpuDetector extends ResourceAvailabilityDetector {
   public ExcessCpuDetector(PolicyConfig policyConfig) {
     super(policyConfig, CONFIG_KEY_PREFIX, SymptomName.EXCESS_CPU.text());
     thresholdRatio = (double) policyConfig.getConfig(CONFIG_KEY_PREFIX + THRESHOLD_RATIO_CONFIG_KEY, 2.0);
-    LOG.info("Detector created: " + this.toString());
+    LOG.info("Detector created: " + this);
   }
 
   @Override

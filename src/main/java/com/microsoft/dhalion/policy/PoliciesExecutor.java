@@ -81,7 +81,7 @@ public class PoliciesExecutor {
         Collection<Measurement> measurements = policy.executeSensors();
         measurements.stream()
             .filter(m -> m.instant().isAfter(current) || m.instant().isBefore(previous))
-            .forEach(m -> LOG.info(m.toString() + "is outside checkpoint window"));
+            .forEach(m -> LOG.info(m + "is outside checkpoint window"));
         context.measurementsTableBuilder.addAll(measurements);
 
         Collection<Symptom> symptoms = policy.executeDetectors(measurements);
@@ -113,7 +113,7 @@ public class PoliciesExecutor {
   private void identifyOutliers(Instant previous, Instant current, Collection<? extends Outcome> outcomes) {
     outcomes.stream()
         .filter(m -> m.instant().isAfter(current) || m.instant().isBefore(previous))
-        .forEach(m -> LOG.warning(m.toString() + " is outside checkpoint window"));
+        .forEach(m -> LOG.warning(m + " is outside checkpoint window"));
   }
 
   public void destroy() {
